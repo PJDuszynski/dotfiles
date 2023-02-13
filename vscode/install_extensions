@@ -19,8 +19,9 @@ export codium_extensions=(
   'mhutchie.git-graph'
   'usernamehw.todo-md'
   'theo-coder.the-best-theme'
+  'medo64.render-crlf'
 )
 
 for extension in "${codium_extensions[@]}"; do
-    codium --install-extension "$extension" --force
+  codium --install-extension "$extension" --force
 done
