@@ -14,6 +14,15 @@ export pacman_packages=(
     # Go
     go
     shfmt
+    #misc
+    neofetch
+    lsd
+    jq
+    tealdeer
+    zoxide
+    zsh
+    rofi
+    yadm
 
 )
 
@@ -28,4 +37,5 @@ export pipx_packages=(
     radon
     poetry
     pytest
+    radian
 )

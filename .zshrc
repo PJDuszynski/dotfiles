@@ -65,14 +65,18 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+eval "$(zoxide init zsh)"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias docker="podman"
 alias t="todo.sh"
 alias code="codium"
-
+alias l="lsd -la"
+alias ls="lsd"
+alias cd="z"
+alias r="radian"
 
 wd() {
     . /usr/share/wd/wd.sh
