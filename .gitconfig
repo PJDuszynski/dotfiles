@@ -26,7 +26,7 @@
 [url "ssh://git@github.com/"]
 	insteadOf = "gh:"
 
-[url "ssh://git@github.com/PJDuszynski"]
+[url "ssh://git@github.com/PJDuszynski/"]
 	insteadOf = "prescott:"
 
 [include]
@@ -41,3 +41,4 @@
 	s = status -s
 	branches = branch -a
 	amend = commit --amend --reuse-message=HEAD
+	c = commit -m
