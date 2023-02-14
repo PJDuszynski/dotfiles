@@ -61,6 +61,15 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
+    eval $(ssh-agent -s -t 216000) > /dev/null
+    if [ "$(ssh-add -l)" = "The agent has no identities." ] ; then
+        ssh-add ~/.ssh/id_ed25519 > /dev/null 2>&1
+    fi
+fi
+
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -78,7 +87,6 @@ alias ls="lsd"
 alias cd="z"
 alias r="radian"
 
-export TEST_VAR="1"
 
 wd() {
     . /usr/share/wd/wd.sh
