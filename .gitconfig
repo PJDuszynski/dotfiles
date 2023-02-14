@@ -23,11 +23,11 @@
 [github]
 	user = PJDuszynski
 
-[url "git@github.com/"]
-	insteadOf = "gh/"
+[url "ssh://git@github.com/"]
+	insteadOf = "gh:"
 
-[url "git@github.com/PJDuszynski"]
-	insteadOf = "me/"
+[url "ssh://git@github.com/PJDuszynski"]
+	insteadOf = "prescott:"
 
 [include]
 	path = ~/.gitconfig.local
