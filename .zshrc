@@ -78,6 +78,8 @@ alias ls="lsd"
 alias cd="z"
 alias r="radian"
 
+export TEST_VAR="1"
+
 wd() {
     . /usr/share/wd/wd.sh
 }
