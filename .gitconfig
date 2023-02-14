@@ -1,0 +1,43 @@
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	status = auto
+
+[user]
+	name = PJDuszynski
+	email = scottduszy@proton.me
+
+[core]
+	sshcommand = ssh -i ~/.ssh/id_ed25519
+	autocrlf = false
+
+[commit]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[github]
+	user = PJDuszynski
+
+[url "git@github.com/"]
+	insteadOf = "gh/"
+
+[url "git@github.com/PJDuszynski"]
+	insteadOf = "me/"
+
+[include]
+	path = ~/.gitconfig.local
+
+[pull]
+	rebase = true
+
+[alias]
+
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	s = status -s
+	branches = branch -a
+	amend = commit --amend --reuse-message=HEAD
