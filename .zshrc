@@ -17,7 +17,7 @@ zstyle ':omz:update' frequency 14
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -45,7 +45,18 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python web-search wd colorize gpg-agent sudo)
+plugins=(
+  aliases
+  archlinux 
+  encode64
+  git
+  python
+  web-search
+  wd
+  colorize 
+  gpg-agent
+  sudo
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +79,9 @@ if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
     fi
 fi
 
+GPG_TTY=$(tty)
+
+
 
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -77,8 +91,7 @@ fi
 eval "$(zoxide init zsh)"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zshconfig="code ~/.zshrc"
 alias docker="podman"
 alias t="todo.sh"
 alias code="codium"
