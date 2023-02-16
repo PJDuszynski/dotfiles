@@ -79,7 +79,7 @@ if [ $(ps ax | grep "[s]sh-agent" | wc -l) -eq 0 ] ; then
     fi
 fi
 
-GPG_TTY=$(tty)
+GPG_TTY=$( tty )
 
 
 
