@@ -1,0 +1,12 @@
+[shell]
+program="wsl"
+args=["-d", "fedoraremix"]
+
+
+[window]
+decorations="none"
+opacity=0.9
+
+[font]
+normal = {family = "Hack Nerd Font Mono", style = "Regular"}
+size=10
