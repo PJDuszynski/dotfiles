@@ -11,10 +11,9 @@ export PATH=$HOME/.cargo/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export SHELL="/bin/zsh"
-. "$HOME/.config/z.sh"
 
  #Set name of the theme to load --- if set to "random", it will
-ZSH_THEME="bureau" # set by `omz`
+ZSH_THEME="kayid" # set by `omz`
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -95,3 +94,5 @@ tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 # Created by `pipx` on 2023-12-31 03:09:01
 export PATH="$PATH:/home/prescott/.local/bin"
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
