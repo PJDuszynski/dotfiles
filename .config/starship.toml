@@ -1,0 +1,7 @@
+[character]
+success_symbol='[❯](bold purple)'
+
+
+[docker_context]
+format = 'via [🐋 $context](blue bold)'
+
