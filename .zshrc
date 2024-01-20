@@ -86,7 +86,7 @@ alias j="just"
 ## keybindings
 bindkey -s "^[n" "nvim^M"
 bindkey -s "^[l" "l^M"
-
+bindkey -s "^[t" "tmux^M"
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
