@@ -4,26 +4,41 @@ export PATH=$HOME/.cargo/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export SHELL="/bin/zsh"
- #Set name of the theme to load --- if set to "random", it will
-ZSH_THEME="kayid" # set by `omz`
 
 HYPHEN_INSENSITIVE="true"
-
-plugins=(aliases 
+ZSH_COLORIZE_TOOL=chroma
+ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
+plugins=(
+        aliases 
         colored-man-pages 
-        systemd 
-        git 
+        colorize
         dnf 
-        vi-mode 
-        tmux 
+        gh
+        git 
+        jsontools
         nomad 
+        podman
         pre-commit 
         starship 
+        systemd 
+        tmux 
+        vi-mode 
         zoxide 
-        gh
       )
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
 export VIMCONF="$HOME/.config/nvim/"  
+
+# Custom Functions
+# From omz plugin, modified to work with wayland or x11
+function cpth {
+  local file="${1:-.}"
+  [[ $file = /* ]] || file="$PWD/$file"
+  local clipboard=clipcopy
+  [[ $XDG_SESSION_TYPE == "x11" ]] || clipboard="wl-copy"
+
+  print -n "${file:a}" | $clipboard || return 1
+  echo ${(%):-"%B${file:a}%b copied to clipboard."}
+}
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -39,7 +54,7 @@ alias vim="nvim"
 alias wlcp="wl-copy"
 alias wlp="wl-paste"
 alias j="just"
-
+alias cpst="clippaste"
 ## keybindings
 bindkey -s "^[n" "nvim^M"
 bindkey -s "^[l" "l^M"
