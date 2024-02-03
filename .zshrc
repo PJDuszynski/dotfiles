@@ -55,6 +55,7 @@ alias wlcp="wl-copy"
 alias wlp="wl-paste"
 alias j="just"
 alias cpst="clippaste"
+alias ccat="bat"
 ## keybindings
 bindkey -s "^[n" "nvim^M"
 bindkey -s "^[l" "l^M"
@@ -62,5 +63,5 @@ bindkey -s "^[t" "tmux^M"
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
-
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /home/prescott/.config/broot/launcher/bash/br
