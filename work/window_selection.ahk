@@ -1,21 +1,26 @@
-RunOrActivate(exe, path)
+
+
+RunOrActivate(app)
 {
+    local  root_path := "C:\Users\pduszynski\customization\ahk_app_shortcuts\"
+    local exe := app ".exe"
     if WinExist("ahk_exe " exe) {
-        local app_instances
-        GroupAdd "app_instances", "ahk_exe" exe
-        GroupActivate "app_instances", "r"
+        app_instances := app "_group"
+        GroupAdd app_instances, "ahk_exe" exe
+        GroupActivate app_instances, "r"
     } else {
-        Run(EnvGet("AppData") path)
+        Run(root_path app ".lnk")
     }
 }
 
-!#f::RunOrActivate("Spotify.exe", "\Spotify\Spotify.exe")
-!#d::RunOrActivate("dbeaver.exe", "\..\Local\DBeaver\dbeaver.exe")
-!#s::RunOrActivate("slack.exe", "\..\Local\slack\slack.exe")
-!#a::RunOrActivate("alacritty.exe", "\..\Local\alacritty\alacritty.exe")
-!#n::RunOrActivate("Nuclino.exe", "\..\Local\Programs\nuclino-desktop\Nuclino.exe")
-!#b::RunOrActivate("betterbird.exe", "\betterbird\betterbird.exe.lnk")
-!#v::RunOrActivate("vivaldi.exe", "\..\Local\Vivaldi\Application\vivaldi.exe")
-!#t::RunOrActivate("WindowsTerminal.exe", "\..\Local\Microsoft\WindowsApps\wt.exe" )
-!#c::RunOrActivate("Code.exe", "\..\Local\Programs\Microsoft VS Code\Code.exe")
-!#e::RunOrActivate("OneCommander.exe", "\..\..\scoop\apps\onecommander\current\OneCommander.exe")
+
+!#f::RunOrActivate("Spotify")
+!#d::RunOrActivate("dbeaver")
+!#s::RunOrActivate("slack")
+!#a::RunOrActivate("alacritty")
+!#n::RunOrActivate("Nuclino")
+!#b::RunOrActivate("betterbird")
+!#v::RunOrActivate("vivaldi")
+!#t::RunOrActivate("WindowsTerminal")
+!#c::RunOrActivate("Code")
+!#e::RunOrActivate("OneCommander")
