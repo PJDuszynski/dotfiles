@@ -62,3 +62,5 @@ bindkey -s "^[t" "tmux^M"
 
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
+
+source /home/prescott/.config/broot/launcher/bash/br
