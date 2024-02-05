@@ -4,7 +4,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export SHELL="/bin/zsh"
-
+export XDG_CONFIG_HOME="/home/prescott/.config"
 HYPHEN_INSENSITIVE="true"
 ZSH_COLORIZE_TOOL=chroma
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
@@ -24,6 +24,8 @@ plugins=(
         tmux 
         vi-mode 
         zoxide 
+        history-substring-search
+        zsh-navigation-tools
       )
 source "$ZSH/oh-my-zsh.sh"
 export VIMCONF="$HOME/.config/nvim/"  
@@ -56,6 +58,10 @@ alias wlp="wl-paste"
 alias j="just"
 alias cpst="clippaste"
 alias ccat="bat"
+alias zshrc="$EDITOR ~/dotfiles/.zshrc"
+alias ram="free -th"
+alias hd="df -h"
+alias rp="realpath"
 ## keybindings
 bindkey -s "^[n" "nvim^M"
 bindkey -s "^[l" "l^M"
