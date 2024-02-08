@@ -4,6 +4,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/neovim/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.rye/env:$PATH"
+source "$HOME/.rye/env"
 
 [[ -f "$HOME/.config/ripgrep/config" ]] && export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
@@ -48,7 +49,7 @@ alias mc="mc --nosubshell"
 alias zshrc="$EDITOR ~/dotfiles/work/.zshrc"
 alias rp="realpath"
 alias vim="nvim"
-
+alias v="source .venv/bin/activate"
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
 bindkey '^[[1;5H' backward-kill-line
