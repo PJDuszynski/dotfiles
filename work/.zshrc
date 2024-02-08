@@ -3,7 +3,7 @@ export PATH="$PATH:$HOME/.dotfiles/scripts"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/neovim/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-
+export PATH="$HOME/.rye/env:$PATH"
 
 [[ -f "$HOME/.config/ripgrep/config" ]] && export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
@@ -47,6 +47,7 @@ alias sudome="sudo --preserve-env=HOME"
 alias mc="mc --nosubshell"
 alias zshrc="$EDITOR ~/dotfiles/work/.zshrc"
 alias rp="realpath"
+alias vim="nvim"
 
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
@@ -56,6 +57,18 @@ bindkey '^[t' 'tmux^M'
 
 
 fastfile_var_prefix="@"
+
+function update-nvim {
+  local nvim_dir="$HOME/.config/nvim/lua/custom"
+  echo "Checking for updated neovim config..."
+  cd "$nvim_dir" && git pull
+}
+
+function update-dotfiles {
+  local dotfiles="$HOME/dotfiles"
+  echo "Checking for updated dotfiles..."
+  cd "$dotfiles" && git pull
+}
 
 if [[ -d "$HOME/.oh-my-zsh" ]]; then
   export ZSH="$HOME/.oh-my-zsh"
