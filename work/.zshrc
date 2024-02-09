@@ -62,7 +62,11 @@ fastfile_var_prefix="@"
 function update-nvim {
   local nvim_dir="$HOME/.config/nvim/lua/custom"
   echo "Checking for updated neovim config..."
-  cd "$nvim_dir" && git pull
+  pushd
+  cd "$nvim_dir" && git stash
+  git pull
+  git stash pop
+  popd
 }
 
 function update-dotfiles {
