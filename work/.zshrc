@@ -50,6 +50,7 @@ alias zshrc="$EDITOR ~/dotfiles/work/.zshrc"
 alias rp="realpath"
 alias vim="nvim"
 alias v="source .venv/bin/activate"
+alias tv="tidy-viewer"
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
 bindkey '^[[1;5H' backward-kill-line
