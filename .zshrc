@@ -5,6 +5,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export SHELL="/bin/zsh"
 export XDG_CONFIG_HOME="/home/prescott/.config"
+export TERM=xterm-256color
 HYPHEN_INSENSITIVE="true"
 ZSH_COLORIZE_TOOL=chroma
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
