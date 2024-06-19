@@ -51,6 +51,8 @@ alias rp="realpath"
 alias vim="nvim"
 alias v="source .venv/bin/activate"
 alias tv="tidy-viewer"
+alias ptpy="ptpython"
+alias clc="clickhouse client"
 bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
 bindkey '^[[1;5H' backward-kill-line
