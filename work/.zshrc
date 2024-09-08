@@ -126,3 +126,4 @@ fi
 source $HOME/.dbt-completion.bash
 source /home/pduszynski/.config/broot/launcher/bash/br
 eval "$(starship init zsh)"
+eval "$(uv generate-shell-completion zsh)"
