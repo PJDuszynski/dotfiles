@@ -3,8 +3,6 @@ export PATH="$PATH:$HOME/.dotfiles/scripts"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/share/neovim/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$HOME/.rye/env:$PATH"
-source "$HOME/.rye/env"
 
 [[ -f "$HOME/.config/ripgrep/config" ]] && export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"
 [[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
