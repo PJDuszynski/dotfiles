@@ -94,13 +94,11 @@ if [[ -d "$HOME/.oh-my-zsh" ]]; then
     dirhistory
     dnf
     fastfile
-    fd
     fzf
     git
     colored-man-pages
     npm
     pip
-    ripgrep
     nomad
     podman
     zoxide
