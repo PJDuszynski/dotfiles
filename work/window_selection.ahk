@@ -1,5 +1,3 @@
-
-
 RunOrActivate(app)
 {
     local  root_path := "C:\Users\pduszynski\customization\ahk_app_shortcuts\"
@@ -16,18 +14,28 @@ RunOrActivate(app)
 
 ; Rebindings
 CapsLock::Esc
+#PgDn::WinMinimize "A"
+#PgUp::WinMaximize "A"
+#Ins::Winrestore "A"
+PrintScreen::LWin
 
 
 !#f::RunOrActivate("Spotify")
 !#d::RunOrActivate("dbeaver")
 !#s::RunOrActivate("slack")
 !#a::RunOrActivate("wezterm-gui")
-!#n::RunOrActivate("Nuclino")
+!#w::RunOrActivate("Nuclino")
 !#b::RunOrActivate("OUTLOOK")
 !#v::RunOrActivate("vivaldi")
 !#t::RunOrActivate("WindowsTerminal")
 !#c::RunOrActivate("Code")
 !#e::RunOrActivate("OneCommander")
-#PgDn::WinMinimize "A"
-#PgUp::WinMaximize "A"
-#Ins::Winrestore "A"
+!#o::RunOrActivate("Obsidian")
+
+^+c::^c
+^+v::^v
+
+#HotIf WinActive("ahk_exe wezterm-gui.exe")
+^+c::^+c
+^+v::^+v
+#HotIf
