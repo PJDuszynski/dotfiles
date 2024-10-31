@@ -31,7 +31,7 @@ PrintScreen::LWin
 !#c::RunOrActivate("Code")
 !#e::RunOrActivate("OneCommander")
 !#o::RunOrActivate("Obsidian")
-!#r::RunOrActivate("rStudio")
+!#r::RunOrActivate("rstudio")
 
 ^+c::^c
 ^+v::^v
