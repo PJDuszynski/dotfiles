@@ -32,11 +32,3 @@ PrintScreen::LWin
 !#e::RunOrActivate("OneCommander")
 !#o::RunOrActivate("Obsidian")
 !#r::RunOrActivate("rstudio")
-
-^+c::^c
-^+v::^v
-
-#HotIf WinActive("ahk_exe wezterm-gui.exe")
-^+c::^+c
-^+v::^+v
-#HotIf
