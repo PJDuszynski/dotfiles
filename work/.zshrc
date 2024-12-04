@@ -56,10 +56,14 @@ bindkey '^H' backward-kill-word
 bindkey '5~' kill-word
 bindkey '^[[1;5H' backward-kill-line
 bindkey '^[[1;5F' kill-line
-bindkey '^[t' 'tmux^M'
-
+bindkey "^[t" 'run-tmux^M'
+bindkey '^[N' 'nvim^M'
 
 fastfile_var_prefix="@"
+
+function run-tmux {
+  tmux
+}
 
 function update-nvim {
   local nvim_dir="$HOME/.config/nvim/lua/custom"
@@ -126,3 +130,4 @@ source $HOME/.dbt-completion.bash
 source /home/pduszynski/.config/broot/launcher/bash/br
 eval "$(starship init zsh)"
 eval "$(uv generate-shell-completion zsh)"
+eval "$(direnv hook zsh)"
